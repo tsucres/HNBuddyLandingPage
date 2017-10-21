@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="91px" height="63px" viewBox="0 0 91 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>comment</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9.1,0 C4.095,0 0,2.835 0,6.3 L0,63 L18.2,50.4 L81.9,50.4 C86.905,50.4 91,47.565 91,44.1 L91,6.3 C91,2.835 86.905,0 81.9,0 L9.1,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="A4" transform="translate(-156.000000, -285.000000)">
+            <g id="comment" transform="translate(156.000000, 285.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <polygon id="Fill-1" fill="#B6B6B6" mask="url(#mask-2)" points="-28 91 120 91 120 -29 -28 -29"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
