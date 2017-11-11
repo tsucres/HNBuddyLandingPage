@@ -102,7 +102,7 @@ img {
 
 #hero header nav ul {
 	text-align: right;
-	margin-top: 15px;
+	margin-top: 20px;
 }
 
 #hero header nav ul li {
@@ -111,8 +111,41 @@ img {
 	margin-right: 30px;
 }
 
+#hero header nav ul li a {
+	color: rgba(0, 0, 0, 0.8);
+}
+
 #hero .intro {
 	margin-top: 96px;
+}
+
+@media (max-width: 992px) {
+  	#hero {
+    	text-align: center; 
+	}
+	#hero header nav ul {
+		text-align: center;
+	}
+	#hero .intro {
+		margin-top: 0px;
+	}
+
+	
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 38px;
+		line-height: 44px;
+		font-weight: 700;
+	}
+
+	h2 {
+		font-size: 27px;
+		line-height: 35px;
+		margin-bottom: 20px;
+	}
+
 }
 
 
@@ -123,6 +156,7 @@ img {
 
 section:not(#hero) .container .row {
 	margin-top: 60px;
+	padding-bottom: 50px;
 }
 
 section .iphone-image {
@@ -139,6 +173,16 @@ section .section-description {
 	font-size: 32px;
 } 
 
+@media (max-width: 992px) {
+	section .section-description {
+		margin: 30px 30px;
+	}
+}
+@media (max-width: 768px) {
+	section .section-description {
+		text-align: center;
+	}
+}
 
 /*
 	Reader section
