@@ -28,6 +28,30 @@
     
 </head>
 <body>
+    <script>
+        /* Js dependent animations*/
+        document.write(`<style>.scroll-apparence {
+            opacity: 0;
+            -webkit-transition: -webkit-transform .8s ease-out;
+            -ms-transition: -ms-transform .8s ease-out;
+            transition: transform .8s ease-out;
+        }
+
+
+        .appear-from-bottom {
+            -ms-transform: translate(0px, 200px); /* IE 9 */
+            -webkit-transform: translate(0px, 200px); /* Safari */
+            transform: translate(0px, 200px);
+        }
+        .appear-from-left {
+            -ms-transform: translate(-200px, 0px); /* IE 9 */
+            -webkit-transform: translate(-200px, 0px); /* Safari */
+            transform: translate(-200px, 0px);
+        }
+        .appear-from-right {
+            right: -200px;
+        }</style>`);
+    </script>
     <section id="hero">
         <div class="container">
             <header>
@@ -72,7 +96,7 @@
                         Also, keep track of all the posts you read and manage your favorite posts as you would on the website.
                     </p>
                 </div>
-                <div class="col-sm-4 col-sm-offset-1 col-sm-pull-6 iphone-image">
+                <div class="col-sm-4 col-sm-offset-1 col-sm-pull-6 iphone-image scroll-apparence appear-from-bottom">
                     <img src="img/lists.png" data-rjs="3">
                 </div>
                 
@@ -92,7 +116,7 @@
                         Browse all the discussions in an efficient and pleasant way. Enjoy of the well formated, rich content of the comments.
                     </p>
                 </div>
-                <div class="col-sm-6 iphone-image">
+                <div class="col-sm-6 iphone-image scroll-apparence appear-from-bottom">
                     <img src="img/discussionThread.png" data-rjs="3">
                 </div>
                 
@@ -114,7 +138,7 @@
                     </p>
                 </div>
 
-                <div class="col-sm-4 col-sm-offset-1 col-sm-pull-6 iphone-image">
+                <div class="col-sm-4 col-sm-offset-1 col-sm-pull-6 iphone-image scroll-apparence appear-from-left">
                     <img src="img/reader.png" data-rjs="3">
                 </div>
                 
@@ -307,8 +331,42 @@
                 $('.parallax').parallaxBackground({
                   'image': '.parallax-img'
                 });
+
+                listsSection = $("#lists-section");
+                commentSectionEl = $("#comments-section");
+                readerSectionEl = $("#reader-section");
+                $(window).scroll(function(){
+                    var windowScrollTop = $(this).scrollTop();
+                    var windowHeight = $(this).height();
+                    if(windowScrollTop > listsSection.position().top - 0.8*windowHeight){
+                        $("#lists-section").find(".appear-from-bottom").each(
+                            function() {
+                                $(this).animate({opacity:1},700);
+                                $(this).removeClass("appear-from-bottom");
+                            }
+                        );
+                    }
+                    if(windowScrollTop > commentSectionEl.position().top - 0.8*windowHeight){
+                        $("#comments-section").find(".appear-from-bottom").each(
+                            function() {
+                                $(this).animate({opacity:1},700);
+                                $(this).removeClass("appear-from-bottom");
+                            }
+                        );
+                    }
+                    if(windowScrollTop > readerSectionEl.position().top - 0.8*windowHeight){
+                        $("#reader-section").find(".appear-from-left").each(
+                            function() {
+                                $(this).animate({opacity:1},700);
+                                $(this).removeClass("appear-from-left");
+                            }
+                        );
+                    }
+                });
    
             });
+
+
 
             console.log(`%c  _    _          _   _             _     _                            _ 
  | |  | |        | | | |           | |   | |                          | |

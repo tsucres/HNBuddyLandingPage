@@ -74,6 +74,37 @@ img {
 	height: auto;
 }
 
+section {
+	overflow-y: hidden ;
+}
+
+
+
+/*
+Apparition with scroll
+*/
+/*
+.scroll-apparence {
+	opacity: 0;
+	-webkit-transition: -webkit-transform .8s ease-out;
+	-ms-transition: -ms-transform .8s ease-out;
+	transition: transform .8s ease-out;
+}
+
+
+.appear-from-bottom {
+	-ms-transform: translate(0px, 200px); 
+    -webkit-transform: translate(0px, 200px); 
+    transform: translate(0px, 200px);
+}
+.appear-from-left {
+	-ms-transform: translate(200px, 0px); 
+    -webkit-transform: translate(200px, 0px); 
+    transform: translate(200px, 0px);
+}
+.appear-from-right {
+	right: -200px;
+}*/
 
 /* 
 	HERO
