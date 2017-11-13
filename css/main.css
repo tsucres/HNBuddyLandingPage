@@ -242,9 +242,8 @@ section .section-description {
   	display: none;
 	position: absolute;
 	width: 100%;
-	height: 1000px;
-	height: 80vh;
-	top: -10vh;
+	height: 130%;
+	top: -10%;
 	z-index: -1;
 }
 

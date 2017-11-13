@@ -20,12 +20,10 @@ Since I'm not a web designer, I needed some inspiration for this page. I found i
 
 Also, the page uses [retinajs](https://github.com/strues/retinajs) to support high ppi screen and load the right images accordingly.
 
+
+[![](screenshots/screen_mini.png)](screenshots/screen.png)
+
+
 ### TODO
 
-The page isn't ready yet: 
-
-- Responsiveness: add media-queries + adjust bootstrap classes
-- fix parallax effect for mobile
-- test on different browsers
-- og, twitter, seo...
 - async load large images (small blurred first, then ajax for the normal size)
