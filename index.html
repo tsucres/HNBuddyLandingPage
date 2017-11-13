@@ -52,7 +52,14 @@
             right: -200px;
         }</style>`);
     </script>
-    <section id="hero">
+    <section id="hero" class="progressive-bg-image">
+        <!-- Progressive load of bg img -->
+        <noscript><img class="full-absolute" src="img/background.jpg"></noscript>
+        <img class="hidden thumbnail" src="img/background_mini.jpg"> <!-- TODO: b64 -->
+        <img class="full-bg-image hidden" src="img/background.jpg">
+        <canvas class="full-absolute progressive-img-load-canvas"></canvas>
+        <!-- ===== -->
+
         <div class="container">
             <header>
                 <div class="row">
@@ -280,7 +287,13 @@
         <div class="parallax-img"></div>
     </section>
 
-    <section id="cat-section">
+    <section id="cat-section" class="progressive-bg-image">
+        <!-- Progressive load of bg img -->
+        <noscript><img class="full-absolute" src="img/cat.jpg"></noscript>
+        <img class="hidden thumbnail" src="img/cat_mini.jpg"> <!-- TODO: b64 -->
+        <img class="full-bg-image hidden" src="img/cat.jpg">
+        <canvas class="full-absolute progressive-img-load-canvas"></canvas>
+        <!-- ===== -->
         <div class="container">
             <div class="row text-center">
                 <h2>Still not convinced? Here's a cat</h2>
@@ -324,6 +337,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/retina.min.js"></script>
+        <script type="text/javascript" src="js/progressive-bg.js"></script>
         <script src="js/parallax-background.min.js"></script>
         <script type="text/javascript">
             // https://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641
@@ -363,8 +377,9 @@
                         );
                     }
                 });
-   
+                $(window).scroll();
             });
+
 
 
 
@@ -379,7 +394,7 @@
 `, "font-family:monospace");
             console.log("If you're here you may be interested in the github repo of the website: https://www.github.com. It contains all the resources used to build this page :)"); 
         </script>
-
+        
 </body>
 
 
