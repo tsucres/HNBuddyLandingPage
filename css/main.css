@@ -127,7 +127,7 @@ Apparition with scroll
 	width: 100%;
 	padding: 30px;
 	/*background: url("../img/background.jpg") no-repeat left top;*/
-	background-position: left top;
+	background-position: center center;
 	background-size: cover;
 	position: relative; 
 }

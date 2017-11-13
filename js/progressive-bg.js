@@ -23,8 +23,6 @@ $(function(){
         this.fullBackgroundImage = $(root_el).find('.full-bg-image')[0];
 
         function fullBackgroundImageLoaded() {
-            console.log("g");
-            console.log(this);
             $(self.root_el).css('background-image', 'url(' + self.fullBackgroundImage.src + ')');
             $(self.canvas).css({opacity: 0});
             self.thumbnailImg.remove();
@@ -33,7 +31,6 @@ $(function(){
         }
 
         if (this.fullBackgroundImage.complete) {
-            console.log("g");
             fullBackgroundImageLoaded();
         } else {
             this.fullBackgroundImage.addEventListener('load', fullBackgroundImageLoaded);
@@ -44,7 +41,6 @@ $(function(){
     }
 
     $('.progressive-bg-image').each(function(){
-        console.log($(this)[0]);
         new progressivelyLoadBackground($(this)[0]);
     });
 });
