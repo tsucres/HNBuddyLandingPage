@@ -1,6 +1,6 @@
 ## HNBuddy - Landing page
 
-This repo is for the landing page of the iOS application HNBuddy (currently under validation for publication on the appstore).
+This repo is for the landing page of the iOS application HNBuddy (available on the [appstore](https://itunes.apple.com/us/app/hnbuddy-hackernews-client/id1312439587?mt=8)).
 
 ### Inspiration
 
