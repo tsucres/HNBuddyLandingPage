@@ -43,6 +43,16 @@
 .icon-speed:before {
   content: "\e904";
 }
+.icon-options:before {
+  content: "\e905";
+}
+.icon-fix:before {
+  content: "\e906";
+}
+.icon-themes:before {
+  content: "\e907";
+}
+
 
 
 /*

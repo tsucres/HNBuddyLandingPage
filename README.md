@@ -24,6 +24,6 @@ Also, the page uses [retinajs](https://github.com/strues/retinajs) to support hi
 [![](screenshots/screen_mini.png)](screenshots/screen.png)
 
 
-### TODO
+### Contribution
 
-- async load large images (small blurred first, then ajax for the normal size)
+- Spelling errors: I'm not a native English speaker, so there are probably several grammatical errors and unnatural sentences. Any correction/rephrasing would be really appreciated!
