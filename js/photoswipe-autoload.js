@@ -41,6 +41,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             if(linkEl.children.length > 0) {
                 // <img> thumbnail element, retrieving thumbnail url
                 item.msrc = linkEl.children[0].getAttribute('src');
+                item.pid = linkEl.children[0].getAttribute('data-pswp-pid');
             } 
 
             item.el = figureEl; // save link to element for getThumbBoundsFn
@@ -100,7 +101,35 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         return false;
     };
 
-    var openPhotoSwipe = function(index, galleryElement) {
+    // parse picture index and gallery index from URL (#&pid=1&gid=2)
+    var photoswipeParseHash = function(hash) {
+        var hash = hash || window.location.hash.substring(1),
+        params = {};
+        console.log(hash);
+        if(hash.length < 5) {
+            return params;
+        }
+
+        var vars = hash.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            if(!vars[i]) {
+                continue;
+            }
+            var pair = vars[i].split('=');  
+            if(pair.length < 2) {
+                continue;
+            }           
+            params[pair[0]] = pair[1];
+        }
+
+        if(params.gid) {
+            params.gid = parseInt(params.gid, 10);
+        }
+
+        return params;
+    };
+
+    var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
         var pswpElement = document.querySelectorAll('.pswp')[0],
             gallery,
             options,
@@ -110,6 +139,9 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
         // define options (if needed)
         options = {
+            history:true, galleryPIDs:true,
+            // define gallery index (for URL)
+            galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 
             getThumbBoundsFn: function(index) {
                 // See Options -> getThumbBoundsFn section of documentation for more info
@@ -122,12 +154,32 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
         };
 
-
-        options.index = parseInt(index, 10);
+        // PhotoSwipe opened from URL
+        if(fromURL) {
+            if(options.galleryPIDs) {
+                // parse real index when custom PIDs are used 
+                // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                for(var j = 0; j < items.length; j++) {
+                    if(items[j].pid == index) {
+                        options.index = j;
+                        break;
+                    }
+                }
+            } else {
+                // in URL indexes start from 1
+                options.index = parseInt(index, 10) - 1;
+            }
+        } else {
+            options.index = parseInt(index, 10);
+        }
 
         // exit if index not found
         if( isNaN(options.index) ) {
             return;
+        }
+
+        if(disableAnimation) {
+            options.showAnimationDuration = 0;
         }
 
         // Pass data to PhotoSwipe and initialize it
@@ -139,9 +191,27 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     var galleryElements = document.querySelectorAll( gallerySelector );
 
     for(var i = 0, l = galleryElements.length; i < l; i++) {
+        galleryElements[i].setAttribute('data-pswp-uid', i+1);
         galleryElements[i].onclick = onThumbnailsClick;
     }
 
+    var imgOpenerLinks = document.querySelectorAll(".img-opener-link");
+    for(var i = 0, l = imgOpenerLinks.length; i < l; i++) {
+        imgOpenerLinks[i].onclick = function(evt) {
+
+            var hashData = photoswipeParseHash(evt.target.href);
+            console.log(hashData);
+            if (hashData.pid && hashData.gid) {
+                openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], false, true );
+            }
+        };
+    }
+
+    // Parse URL and open gallery if it contains #&pid=3&gid=1
+    var hashData = photoswipeParseHash();
+    if(hashData.pid && hashData.gid) {
+        openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+    }
 };
 
 // execute above function
