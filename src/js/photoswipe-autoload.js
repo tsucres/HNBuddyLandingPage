@@ -105,7 +105,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     var photoswipeParseHash = function(hash) {
         var hash = hash || window.location.hash.substring(1),
         params = {};
-        console.log(hash);
         if(hash.length < 5) {
             return params;
         }
@@ -200,7 +199,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         imgOpenerLinks[i].onclick = function(evt) {
 
             var hashData = photoswipeParseHash(evt.target.href);
-            console.log(hashData);
             if (hashData.pid && hashData.gid) {
                 openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], false, true );
             }

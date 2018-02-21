@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="HNBuddy, Hacker News, iOS, mobile, application">
+        <meta name="description" content="HNBuddy is (yet another) Hacker News client for iOS. It's elegant, fast secure and optimised for a great user experience. It includes a customisable reader, expandable discussion threads and supports most of the HN website's features.">
+        
+    <title>Contribute - HNBuddy</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fb882c">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- TODO: Schema.org, Twitter card, OG -->
+    <meta name="apple-itunes-app" content="app-id=1312439587">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+     
+<link rel="stylesheet" type="text/css" href="css/gmc.min.css">
+<link rel="stylesheet" type="text/css" href="css/contrib.min.css">
+
+
+
+</head>
+<body>
+
+    
+    
+    <section id="hero" class="progressive-bg-image">
+    <!-- Progressive load of bg img -->
+    <noscript><img class="full-absolute" src="img/background.jpg"></noscript>
+    <img class="hidden thumbnail" src="img/background_mini.jpg"> <!-- TODO: b64 -->
+    <img class="full-bg-image hidden" src="img/background.jpg">
+    <canvas class="full-absolute progressive-img-load-canvas"></canvas>
+    
+    <div class="overlay full-absolute"></div>
+    
+    <!-- ===== -->
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logo">
+                    <a href="/index.html"><img src="img/logo.png" data-rjs="3"></a>
+                </div>
+                <nav class="col-lg-7 menu col-lg-offset-1 col-md-6 col-md-offset-2 col-sm-8 col-xs-12"><!-- hidden-xs">-->
+                    <ul>
+                        <li><a href="mailto:contact@hnbuddy.io" target="blank">Contact</a></li>
+                        <!--<li><a href="/faq.html">FAQ</a></li>-->
+                        <!--<li><a href="/contrib.html">Contribute</a></li>-->
+                        <li><a href="/updates.html">Updates</a></li>
+                        <li><a href="https://itunes.apple.com/us/app/hnbuddy-hackernews-client/id1312439587?mt=8" target="blank">Download</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="row">
+    <h1 class="text-center">Contribute</h1>
+</div>
+    </div>
+</section>
+
+    
+
+    <div class="container-fluid">
+    	
+    	<p>HNbuddy is built using several open source component. If you're not a Swift developer, don't worry, you can still help!</p>
+
+
+	    <h4>HNScraper</h4>
+        <div class="row">
+	    	<div class="col-sm-8 col-sm-offset-2 col-xs-12">
+
+<div data-gmc-repo="tsucres/HNScraper">
+  <div class="gh p-rel">
+    <div class="only-if-loading full-absolute p-3">
+      <div class="title-placeholder mb-2">
+        <span class="content-placeholder" style="width:70px;width:17em;">&nbsp;</span>
+      </div>
+      <div class="desc-placeholder mb-1">
+        <span class="content-placeholder" style="width:95%;">&nbsp;</span>
+      </div>
+      <div class="desc-placeholder mb-1">
+        <span class="content-placeholder" style="width:40%;">&nbsp;</span>
+      </div>
+      <div class="controls-placeholder mt-2">
+        <span class="content-placeholder" style="width:30%;">&nbsp;</span>
+      </div>
+      
+    </div>
+    <div class="only-if-error">
+      <div class="full-absolute error-view">
+        <div class="p-rel">
+          <svg aria-hidden="true" class="octicon" height="40" version="1.1" viewBox="0 0 14 16" width="35"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+          <h3>Couldn't fetch information for this repo.</h3>
+        </div>
+        
+      </div>
+    </div>
+    <div class="border rounded-1 p-3 only-if-loaded">
+      <span class="f4 lh-condensed text-bold text-gray-dark"><a target="_blank" href="https://github.com/" class="link-gray-dark text-bold wb-break-all" data-gmc-id="in__full_name, href__full_name__js" data-gmc-js="getRepoURL"></a></span>
+      <p data-gmc-id="in__description"></p>
+      <p class="f6 text-gray mt-2 mb-0">
+          <span class="d-inline-block text-gray mr-3">
+            <span class="repo-language-color ml-0" data-gmc-id="style__language__js" data-gmc-js="getStyleForLanguage"></span>
+            <span class="mr-3" data-gmc-id="in__language"></span>
+          </span>
+          <span class="d-inline-block mr-3">
+              <a target="_blank" href="" class="muted-link" data-gmc-id="href__full_name__js" data-gmc-js="getStargazersURL">
+                <svg aria-hidden="true" class="octicon octicon-star mr-1" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg><span data-gmc-id="in__stargazers_count__js" data-gmc-js="humanReadable"></span>
+              </a>
+          </span>
+          Updated <span data-gmc-id="in__updated_at__js" data-gmc-js="formatDate"></span>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+    		
+    	<p>HNScraper handles all the interactions with the website. This includes news fetching, favoriting/upvoting items, as well as logging into hacker news.</p>
+
+
+    	<h4>SwiftyMercuryReady</h4>
+        <div class="row">
+		    <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+
+<div data-gmc-repo="tsucres/SwiftyMercuryReady">
+  <div class="gh p-rel">
+    <div class="only-if-loading full-absolute p-3">
+      <div class="title-placeholder mb-2">
+        <span class="content-placeholder" style="width:70px;width:17em;">&nbsp;</span>
+      </div>
+      <div class="desc-placeholder mb-1">
+        <span class="content-placeholder" style="width:95%;">&nbsp;</span>
+      </div>
+      <div class="desc-placeholder mb-1">
+        <span class="content-placeholder" style="width:40%;">&nbsp;</span>
+      </div>
+      <div class="controls-placeholder mt-2">
+        <span class="content-placeholder" style="width:30%;">&nbsp;</span>
+      </div>
+      
+    </div>
+    <div class="only-if-error">
+      <div class="full-absolute error-view">
+        <div class="p-rel">
+          <svg aria-hidden="true" class="octicon" height="40" version="1.1" viewBox="0 0 14 16" width="35"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+          <h3>Couldn't fetch information for this repo.</h3>
+        </div>
+        
+      </div>
+    </div>
+    <div class="border rounded-1 p-3 only-if-loaded">
+      <span class="f4 lh-condensed text-bold text-gray-dark"><a target="_blank" href="https://github.com/" class="link-gray-dark text-bold wb-break-all" data-gmc-id="in__full_name, href__full_name__js" data-gmc-js="getRepoURL"></a></span>
+      <p data-gmc-id="in__description"></p>
+      <p class="f6 text-gray mt-2 mb-0">
+          <span class="d-inline-block text-gray mr-3">
+            <span class="repo-language-color ml-0" data-gmc-id="style__language__js" data-gmc-js="getStyleForLanguage"></span>
+            <span class="mr-3" data-gmc-id="in__language"></span>
+          </span>
+          <span class="d-inline-block mr-3">
+              <a target="_blank" href="" class="muted-link" data-gmc-id="href__full_name__js" data-gmc-js="getStargazersURL">
+                <svg aria-hidden="true" class="octicon octicon-star mr-1" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg><span data-gmc-id="in__stargazers_count__js" data-gmc-js="humanReadable"></span>
+              </a>
+          </span>
+          Updated <span data-gmc-id="in__updated_at__js" data-gmc-js="formatDate"></span>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+
+		<p>This component is used to render the news with customizable font and theme.</p>
+
+		<h4>SwiftyComments</h4>
+        <div class="row">
+		    <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+
+<div data-gmc-repo="tsucres/SwiftyComments">
+  <div class="gh p-rel">
+    <div class="only-if-loading full-absolute p-3">
+      <div class="title-placeholder mb-2">
+        <span class="content-placeholder" style="width:70px;width:17em;">&nbsp;</span>
+      </div>
+      <div class="desc-placeholder mb-1">
+        <span class="content-placeholder" style="width:95%;">&nbsp;</span>
+      </div>
+      <div class="desc-placeholder mb-1">
+        <span class="content-placeholder" style="width:40%;">&nbsp;</span>
+      </div>
+      <div class="controls-placeholder mt-2">
+        <span class="content-placeholder" style="width:30%;">&nbsp;</span>
+      </div>
+      
+    </div>
+    <div class="only-if-error">
+      <div class="full-absolute error-view">
+        <div class="p-rel">
+          <svg aria-hidden="true" class="octicon" height="40" version="1.1" viewBox="0 0 14 16" width="35"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+          <h3>Couldn't fetch information for this repo.</h3>
+        </div>
+        
+      </div>
+    </div>
+    <div class="border rounded-1 p-3 only-if-loaded">
+      <span class="f4 lh-condensed text-bold text-gray-dark"><a target="_blank" href="https://github.com/" class="link-gray-dark text-bold wb-break-all" data-gmc-id="in__full_name, href__full_name__js" data-gmc-js="getRepoURL"></a></span>
+      <p data-gmc-id="in__description"></p>
+      <p class="f6 text-gray mt-2 mb-0">
+          <span class="d-inline-block text-gray mr-3">
+            <span class="repo-language-color ml-0" data-gmc-id="style__language__js" data-gmc-js="getStyleForLanguage"></span>
+            <span class="mr-3" data-gmc-id="in__language"></span>
+          </span>
+          <span class="d-inline-block mr-3">
+              <a target="_blank" href="" class="muted-link" data-gmc-id="href__full_name__js" data-gmc-js="getStargazersURL">
+                <svg aria-hidden="true" class="octicon octicon-star mr-1" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg><span data-gmc-id="in__stargazers_count__js" data-gmc-js="humanReadable"></span>
+              </a>
+          </span>
+          Updated <span data-gmc-id="in__updated_at__js" data-gmc-js="formatDate"></span>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+
+		<p>To display the discussion threads, HNBuddy uses the SwiftyComments module.</p>
+
+
+		<h4>SwiftyComments</h4>
+        <div class="row">
+		    <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+
+<div data-gmc-repo="tsucres/HeaderedTabScrollView">
+  <div class="gh p-rel">
+    <div class="only-if-loading full-absolute p-3">
+      <div class="title-placeholder mb-2">
+        <span class="content-placeholder" style="width:70px;width:17em;">&nbsp;</span>
+      </div>
+      <div class="desc-placeholder mb-1">
+        <span class="content-placeholder" style="width:95%;">&nbsp;</span>
+      </div>
+      <div class="desc-placeholder mb-1">
+        <span class="content-placeholder" style="width:40%;">&nbsp;</span>
+      </div>
+      <div class="controls-placeholder mt-2">
+        <span class="content-placeholder" style="width:30%;">&nbsp;</span>
+      </div>
+      
+    </div>
+    <div class="only-if-error">
+      <div class="full-absolute error-view">
+        <div class="p-rel">
+          <svg aria-hidden="true" class="octicon" height="40" version="1.1" viewBox="0 0 14 16" width="35"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+          <h3>Couldn't fetch information for this repo.</h3>
+        </div>
+        
+      </div>
+    </div>
+    <div class="border rounded-1 p-3 only-if-loaded">
+      <span class="f4 lh-condensed text-bold text-gray-dark"><a target="_blank" href="https://github.com/" class="link-gray-dark text-bold wb-break-all" data-gmc-id="in__full_name, href__full_name__js" data-gmc-js="getRepoURL"></a></span>
+      <p data-gmc-id="in__description"></p>
+      <p class="f6 text-gray mt-2 mb-0">
+          <span class="d-inline-block text-gray mr-3">
+            <span class="repo-language-color ml-0" data-gmc-id="style__language__js" data-gmc-js="getStyleForLanguage"></span>
+            <span class="mr-3" data-gmc-id="in__language"></span>
+          </span>
+          <span class="d-inline-block mr-3">
+              <a target="_blank" href="" class="muted-link" data-gmc-id="href__full_name__js" data-gmc-js="getStargazersURL">
+                <svg aria-hidden="true" class="octicon octicon-star mr-1" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg><span data-gmc-id="in__stargazers_count__js" data-gmc-js="humanReadable"></span>
+              </a>
+          </span>
+          Updated <span data-gmc-id="in__updated_at__js" data-gmc-js="formatDate"></span>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+        </div>
+
+		<p>The user page is built on top a HeaderedTabScrollView.</p>
+
+        <h3>Other ways to contribute</h3>
+        <ul>
+            <li>Leave a review on the appstore</li>
+            <li>Correct typos</li>
+            <li>Give a feedbag, report bugs, request new features.</li>
+        </ul>
+
+    </div>
+
+
+    	
+
+
+<footer>
+    <div class="container">
+        <div class="row text-center">
+            <p class="links">
+                <a href="https://itunes.apple.com/us/app/hnbuddy-hackernews-client/id1312439587">Appstore</a><!-- - <a href="">Github</a>--> - <a href="mailto:contact@hnbuddy.io">Contact</a>
+            </p>
+            <p>Made with <strong>passion</strong> in Brussels. Copyright 2017 <a href="https://github.com/tsucres">Stéphane Sercu</a>.</p>
+        </div>
+    </div>
+    
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+
+        
+<script type="text/javascript" src="js/progressive-bg.js"></script>
+<script type="text/javascript" src="js/gmc.min.js"></script> 
+<script type="text/javascript">window.onload = GMC.loadAllCards();</script>
+
+</body>
+</html>

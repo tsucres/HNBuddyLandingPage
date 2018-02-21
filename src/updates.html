@@ -1,0 +1,58 @@
+{% extends "templates/abstractPage.html" %}
+
+{% block title %}Updates - HNBuddy{% endblock %}
+
+{% block css %} 
+<link rel="stylesheet" href="css/updates.min.css">
+<link rel="stylesheet" href="css/photoswipe-skin/default-skin.css">
+{% endblock %}
+
+{% block body %}
+    {% set headerOverlay = true %}
+    {% set headerContentTemplateName = "templates/headers/updatesHeader.html" %}
+    {% include "templates/header.html" %}
+    
+    <section class="container">
+        <div class="row">
+            <div class="col-md-2 side-menu">
+                <h3>Log</h3>
+                <ul>
+                    <li><a href="#future">Future versions</a></li>
+                    <li><a href="#v1.1.0">v 1.1.0</a></li>
+                    <li><a href="#v1.0.1">v 1.0.1</a></li>
+                    <li><a href="#v1.0.0">v 1.0.0</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <section id="future">
+                    {% include "templates/updates/future.html" %}
+                </section>
+                <section id="v1.1.0">
+                    {% include "templates/updates/v1_1_0.html" %}
+                </section>
+                <section id="v1.0.1">
+                    {% include "templates/updates/v1_0_1.html" %}
+               </section>
+               <section id="v1.0.0">
+                    <h3>v 1.0.0 - Nov 14, 2017</h3>
+               </section>
+            </div>
+        </div>
+
+        
+    </section>
+    
+
+    {% include "templates/footer.html" %}
+    {% include "templates/photoswipeGallery.html" %}
+{% endblock %}
+
+{% block endJs %}
+        <script type="text/javascript" src="js/progressive-bg.js"></script>
+
+        <script type="text/javascript" src="js/photoswipe.min.js"></script> 
+        
+        
+        {% include "templates/helloThere.html" %}  
+        
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "templates/abstractPage.html" %}
+
+{% block title %}Contribute - HNBuddy{% endblock %}
+
+{% block css %} 
+<link rel="stylesheet" type="text/css" href="css/gmc.min.css">
+<link rel="stylesheet" type="text/css" href="css/contrib.min.css">
+
+{% endblock %}
+
+
+{% block body %}
+    {% set headerOverlay = true %}
+    {% set headerContentTemplateName = "templates/headers/contribHeader.html" %}
+    {% include "templates/header.html" %}
+
+    {% import "templates/gmc.html" as gmc %}
+
+    <div class="container-fluid">
+    	
+    	<p>HNbuddy is built using several open source component. If you're not a Swift developer, don't worry, you can still help!</p>
+
+
+	    <h4>HNScraper</h4>
+        <div class="row">
+	    	<div class="col-sm-8 col-sm-offset-2 col-xs-12">{{ gmc.gmc("tsucres/HNScraper") }}</div>
+        </div>
+    		
+    	<p>HNScraper handles all the interactions with the website. This includes news fetching, favoriting/upvoting items, as well as logging into hacker news.</p>
+
+
+    	<h4>SwiftyMercuryReady</h4>
+        <div class="row">
+		    <div class="col-sm-8 col-sm-offset-2 col-xs-12">{{ gmc.gmc("tsucres/SwiftyMercuryReady") }}</div>
+        </div>
+
+		<p>This component is used to render the news with customizable font and theme.</p>
+
+		<h4>SwiftyComments</h4>
+        <div class="row">
+		    <div class="col-sm-8 col-sm-offset-2 col-xs-12">{{ gmc.gmc("tsucres/SwiftyComments") }}</div>
+        </div>
+
+		<p>To display the discussion threads, HNBuddy uses the SwiftyComments module.</p>
+
+
+		<h4>SwiftyComments</h4>
+        <div class="row">
+		    <div class="col-sm-8 col-sm-offset-2 col-xs-12">{{ gmc.gmc("tsucres/HeaderedTabScrollView") }}</div>
+        </div>
+
+		<p>The user page is built on top a HeaderedTabScrollView.</p>
+
+        <h3>Other ways to contribute</h3>
+        <ul>
+            <li>Leave a review on the appstore</li>
+            <li>Correct typos</li>
+            <li>Give a feedbag, report bugs, request new features.</li>
+        </ul>
+
+    </div>
+
+
+    	
+
+
+{% include "templates/footer.html" %}
+{% endblock %}
+{% block endJs %}
+<script type="text/javascript" src="js/progressive-bg.js"></script>
+<script type="text/javascript" src="js/gmc.min.js"></script> 
+<script type="text/javascript">window.onload = GMC.loadAllCards();</script>
+{% endblock %}

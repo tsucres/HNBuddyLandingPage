@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="HNBuddy, Hacker News, iOS, mobile, application">
+        <meta name="description" content="HNBuddy is (yet another) Hacker News client for iOS. It's elegant, fast secure and optimised for a great user experience. It includes a customisable reader, expandable discussion threads and supports most of the HN website's features.">
+        
+    <title>Updates - HNBuddy</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fb882c">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- TODO: Schema.org, Twitter card, OG -->
+    <meta name="apple-itunes-app" content="app-id=1312439587">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+     
+<link rel="stylesheet" href="css/updates.min.css">
+<link rel="stylesheet" href="css/photoswipe-skin/default-skin.css">
+
+
+</head>
+<body>
+
+    
+    
+    <section id="hero" class="progressive-bg-image">
+    <!-- Progressive load of bg img -->
+    <noscript><img class="full-absolute" src="img/background.jpg"></noscript>
+    <img class="hidden thumbnail" src="img/background_mini.jpg"> <!-- TODO: b64 -->
+    <img class="full-bg-image hidden" src="img/background.jpg">
+    <canvas class="full-absolute progressive-img-load-canvas"></canvas>
+    
+    <div class="overlay full-absolute"></div>
+    
+    <!-- ===== -->
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logo">
+                    <a href="/index.html"><img src="img/logo.png" data-rjs="3"></a>
+                </div>
+                <nav class="col-lg-7 menu col-lg-offset-1 col-md-6 col-md-offset-2 col-sm-8 col-xs-12"><!-- hidden-xs">-->
+                    <ul>
+                        <li><a href="mailto:contact@hnbuddy.io" target="blank">Contact</a></li>
+                        <!--<li><a href="/faq.html">FAQ</a></li>-->
+                        <!--<li><a href="/contrib.html">Contribute</a></li>-->
+                        <li><a href="/updates.html">Updates</a></li>
+                        <li><a href="https://itunes.apple.com/us/app/hnbuddy-hackernews-client/id1312439587?mt=8" target="blank">Download</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="row">
+    <h1 class="text-center">Updates</h1>
+</div>
+    </div>
+</section>
+    
+    <section class="container">
+        <div class="row">
+            <div class="col-md-2 side-menu">
+                <h3>Log</h3>
+                <ul>
+                    <li><a href="#future">Future versions</a></li>
+                    <li><a href="#v1.1.0">v 1.1.0</a></li>
+                    <li><a href="#v1.0.1">v 1.0.1</a></li>
+                    <li><a href="#v1.0.0">v 1.0.0</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <section id="future">
+                    <h3>In future versions</h3>
+<div>
+
+    <ul>
+        <li>
+            Major new features:
+            <ul>
+                <li>Downvote posts</li>
+                <li>Post new comments/replies in the comment section</li>
+                <li>Submit new posts</li>
+                <li>Option to download the comments and/or the content (webpage) of the post</li>
+            </ul>
+        </li>
+        <li>
+            Other improvements: 
+            <ul>
+                <li>Swipe to fold comments</li>
+                <li>Add an option (on the "appearance" page) to change the font-size (news titles, comments content, ...)</li>
+                <li>Support for Pocket</li>
+                <li>Show disk space used by saved items in "Stats"</li>
+                <li>Bug fixes: 
+                    <ul>
+                        <li>A tap on the top of a comment on the user page (list of comments posted by the user) should lead to the original discussion.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        
+        
+    </ul>
+</div>
+                </section>
+                <section id="v1.1.0">
+                    <h3>v 1.1.0 - (In Review)</h3>
+<div class="col-md-12">
+    
+    <div class="version-summary-card col-xs-6">
+        <div class="version-summary-card-title">
+            <span class="icon">
+                <i class="icon-themes"></i>
+            </span>
+            
+            <h3>New themes</h3>
+        </div>
+        <p>
+            You can chose between several new themes and mark them as your preferred light/dark theme to replace the default ones.
+        </p>
+    </div>
+    <div class="version-summary-card col-xs-6">
+        <div class="version-summary-card-title">
+            <span class="icon">
+                <i class="icon-options"></i>
+            </span>
+            
+            <h3>More options</h3>
+        </div>
+        <p>
+            The <a href="#&gid=1&pid=preferences" class="img-opener-link">"preferences" page</a> was rebuilt from scratch to add several new options: expand discussions by default, disable the reader by default, ... 
+            <!--What else could you want? (No but seriously, <a href="mailto:contact@hnbuddy.io">tell me</a>.)-->
+        </p>
+    </div>
+    <div class="version-summary-card col-xs-6">
+        <div class="version-summary-card-title">
+            <span class="icon">
+                <i class="icon-fix"></i>
+            </span>
+            
+            <h3>Fix bugs</h3>
+        </div>
+        <p>
+            Fixed several bugs on the "Lists" tab.
+        </p>
+    </div>
+</div>
+<div class="col-md-12">
+
+    <ul>
+        <li>2 new themes: <a class="img-opener-link" href="#&gid=1&pid=readerDarkTheme">Reader Dark</a> and <a class="img-opener-link" href="#&gid=1&pid=readerLightTheme">Reader Light</a>. You can select your preferred light and dark themes. You can then manually switch between them or let the app pick the right one for you.</li>
+        <li>New list layout style: <a class="img-opener-link" href="#&gid=1&pid=denseLayout">dense layout</a>. You can choose the default style in the options or switch between them manually using  the toggle switch on the top of the news list on the home page.</li>
+        <li>New contribution guide + <a class="img-opener-link" href="#&gid=1&pid=contactForm">contact form</a></li>
+        <li>
+            New options:
+            <ul>
+                <li>Disable the automatic reader, open directly the webpage instead</li>
+                <li>Expand all the comments/replies by default</li>
+                <li>Disable the rearrangement of the comment section when a comment is expanded: by default the comment section is scrolled to make the first reply visible.</li>
+            </ul>
+        </li>
+
+        <li>
+            Bug fixes: 
+            <ul>
+                <li>Cut text on the login form</li>
+                <li>Empty state placeholder that wasn't disappearing in the "Submissions" list</li>
+                <li>Fixed sort filters in the lists (they didn't work)</li>
+                <li>Load more than 30 bookmarks & recently read news (in the lists)</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="col-md-12">
+    <div class="img-gallery flexbin flexbin-margin" itemscope itemtype="http://schema.org/ImageGallery" data-pswp-uid="0">
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="img/v1.1.0/appearance.png" itemprop="contentUrl" data-size="750x1334">
+                <img src="img/v1.1.0/appearance_mini.png" itemprop="thumbnail" alt="New 'appearance' page" data-pswp-pid="appearance"/>
+            </a>
+            <figcaption itemprop="caption description">New "appearance" page</figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="img/v1.1.0/contactForm.png" itemprop="contentUrl" data-size="750x1334">
+                <img src="img/v1.1.0/contactForm_mini.png" itemprop="thumbnail" alt="New embedded contact form" data-pswp-pid="contactForm"/>
+            </a>
+            <figcaption itemprop="caption description">New embedded contact form</figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="img/v1.1.0/preferences.png" itemprop="contentUrl" data-size="750x1334">
+                <img src="img/v1.1.0/preferences_mini.png" itemprop="thumbnail" alt="'Preferences' rebuilt from scratch" data-pswp-pid="preferences"/>
+            </a>
+            <figcaption itemprop="caption description">"Preferences" rebuilt from scratch</figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="img/v1.1.0/readerDarkTheme.png" itemprop="contentUrl" data-size="750x1334">
+                <img src="img/v1.1.0/readerDarkTheme_mini.png" itemprop="thumbnail" alt="New theme: 'Reader Dark'" data-pswp-pid="readerDarkTheme"/>
+            </a>
+            <figcaption itemprop="caption description">New theme: "Reader Dark"</figcaption>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="img/v1.1.0/denseLayout.png" itemprop="contentUrl" data-size="750x1334">
+                <img src="img/v1.1.0/denseLayout_mini.png" itemprop="thumbnail" alt="New 'dense' layout" data-pswp-pid="denseLayout"/>
+            </a>
+            <figcaption itemprop="caption description">New "dense" layout</figcaption>
+        </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="img/v1.1.0/readerLightTheme.png" itemprop="contentUrl" data-size="750x1334">
+                <img src="img/v1.1.0/readerLightTheme_mini.png" itemprop="thumbnail" alt="New theme: 'Reader Light'" data-pswp-pid="readerLightTheme"/>
+            </a>
+            <figcaption itemprop="caption description">New theme: "Reader Light"</figcaption>
+        </figure>
+
+
+    </div>
+</div>
+                </section>
+                <section id="v1.0.1">
+                    <h3>v 1.0.1 - Feb 7, 2018</h3>
+<div class="col-md-12">
+    <div class="version-summary-card col-xs-6">
+        <div class="version-summary-card-title">
+            <span class="icon">
+                <i class="icon-fix"></i>
+            </span>
+            
+            <h3>Fix bugs</h3>
+        </div>
+        <p>
+            Quick update to fix some minor, but yet annoying, bugs.
+        </p>
+    </div>
+</div>
+
+<div class="col-md-12"> 
+    <div>
+        <ul><li>Improvements: 
+        <ul>
+            <li>
+                The comments of the noob users are now marked with a green username
+            </li>
+            <li>
+                When expanded, the comments are automatically moved to make the replies visible
+            </li>
+        </ul></li>
+        <li>Bug fixes: 
+        <ul>
+            <li>
+                Upvote askHN posts on the comment view
+            </li>
+            <li>
+                Correctly show the username of noob users
+            </li>
+            <li>
+                Other minor bug fixes
+            </li>
+        </ul></li>
+    </div>
+    
+</div>
+               </section>
+               <section id="v1.0.0">
+                    <h3>v 1.0.0 - Nov 14, 2017</h3>
+               </section>
+            </div>
+        </div>
+
+        
+    </section>
+    
+
+    <footer>
+    <div class="container">
+        <div class="row text-center">
+            <p class="links">
+                <a href="https://itunes.apple.com/us/app/hnbuddy-hackernews-client/id1312439587">Appstore</a><!-- - <a href="">Github</a>--> - <a href="mailto:contact@hnbuddy.io">Contact</a>
+            </p>
+            <p>Made with <strong>passion</strong> in Brussels. Copyright 2017 <a href="https://github.com/tsucres">Stéphane Sercu</a>.</p>
+        </div>
+    </div>
+    
+</footer>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+
+        
+        <script type="text/javascript" src="js/progressive-bg.js"></script>
+
+        <script type="text/javascript" src="js/photoswipe.min.js"></script> 
+        
+        
+        <script type="text/javascript">
+console.log(`%c  _    _          _   _             _     _                            _ 
+ | |  | |        | | | |           | |   | |                          | |
+ | |__| |   ___  | | | |   ___     | |_  | |__     ___   _ __    ___  | |
+ |  __  |  / _ \\ | | | |  / _ \\    | __| | '_ \\   / _ \\ | '__|  / _ \\ | |
+ | |  | | |  __/ | | | | | (_) |   | |_  | | | | |  __/ | |    |  __/ |_|
+ |_|  |_|  \\___| |_| |_|  \\___/     \\__| |_| |_|  \\___| |_|     \\___| (_)
+                                                                         
+                                                                         
+`, "font-family:monospace");
+            console.log("If you're here you may be interested in the github repo of the website: https://www.github.com. It contains all the resources used to build this page :)"); 
+</script>
+          
+        
+
+</body>
+</html>

@@ -27,3 +27,12 @@ Also, the page uses [retinajs](https://github.com/strues/retinajs) to support hi
 ### Contribution
 
 - Spelling errors: I'm not a native English speaker, so there are probably several grammatical errors and unnatural sentences. Any correction/rephrasing would be really appreciated!
+
+### TODO
+
+- Get rid of jQuery
+- Finish contrib page
+- FAQ page
+- Complete Readme with a description of the structure of the repo (gulp and all) + presenting the new pages. Commenting on usage of photoswipe, GMC, nunjucks, ...
+- Clean gulp file
+- Rebuild footer

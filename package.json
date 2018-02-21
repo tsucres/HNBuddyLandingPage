@@ -1,0 +1,31 @@
+{
+  "name": "hnbuddy-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page for HNBuddy - Hackernews client for iOS",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsucres/HNBuddyLandingPage.git"
+  },
+  "keywords": [
+    "HNBuddy",
+    "Hackernews",
+    "LandingPage"
+  ],
+  "author": "Stéphane Sercu",
+  "bugs": {
+    "url": "https://github.com/tsucres/HNBuddyLandingPage/issues"
+  },
+  "homepage": "https://github.com/tsucres/HNBuddyLandingPage#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-nunjucks": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}

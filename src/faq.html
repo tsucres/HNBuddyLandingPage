@@ -23,15 +23,11 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.min.css">
-    
-    
-    
+    <link rel="stylesheet" href="css/main.css">
 
+    
 </head>
 <body>
-
-
     <script>
         /* Js dependent animations*/
         document.write(`<style>.scroll-apparence {
@@ -56,44 +52,42 @@
             right: -200px;
         }</style>`);
     </script>
-    
     <section id="hero" class="progressive-bg-image">
-    <!-- Progressive load of bg img -->
-    <noscript><img class="full-absolute" src="img/background.jpg"></noscript>
-    <img class="hidden thumbnail" src="img/background_mini.jpg"> <!-- TODO: b64 -->
-    <img class="full-bg-image hidden" src="img/background.jpg">
-    <canvas class="full-absolute progressive-img-load-canvas"></canvas>
-    
-    <!-- ===== -->
-    <div class="container">
-        <header>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logo">
-                    <a href="/index.html"><img src="img/logo.png" data-rjs="3"></a>
+        <!-- Progressive load of bg img -->
+        <noscript><img class="full-absolute" src="img/background.jpg"></noscript>
+        <img class="hidden thumbnail" src="img/background_mini.jpg"> <!-- TODO: b64 -->
+        <img class="full-bg-image hidden" src="img/background.jpg">
+        <canvas class="full-absolute progressive-img-load-canvas"></canvas>
+        <!-- ===== -->
+
+        <div class="container">
+            <header>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logo">
+                    <img src="img/logo.png" data-rjs="3">
                 </div>
-                <nav class="col-lg-7 menu col-lg-offset-1 col-md-6 col-md-offset-2 col-sm-8 col-xs-12"><!-- hidden-xs">-->
+                <nav class="col-lg-4 menu col-lg-offset-4 col-md-5 col-md-offset-3 col-sm-8 col-xs-12"><!-- hidden-xs">-->
                     <ul>
                         <li><a href="mailto:contact@hnbuddy.io" target="blank">Contact</a></li>
-                        <!--<li><a href="/faq.html">FAQ</a></li>-->
-                        <!--<li><a href="/contrib.html">Contribute</a></li>-->
-                        <li><a href="/updates.html">Updates</a></li>
+                        <!--<li><a href="#" target="blank">FAQ</a></li>-->
                         <li><a href="https://itunes.apple.com/us/app/hnbuddy-hackernews-client/id1312439587?mt=8" target="blank">Download</a></li>
                     </ul>
                 </nav>
+                </div>
+            </header>
+            <div class="row">
+                <div class="col-lg-6 col-md-7 col-lg-offset-1 col-xs-12 intro">
+                    <h1>Yet another Hacker News client for iOS</h1>
+                    <h2>Simple, fast, intuitive and elegant. HNBuddy will make your browsing experience precisely as good as its developer's programming skills permit it to be!</h2>
+                    <a href="https://itunes.apple.com/us/app/hnbuddy-hackernews-client/id1312439587?mt=8" target="_blank"><img src="img/appstore-button.png" data-rjs="3"></a>
+                </div>
+                <div class="col-lg-5 col-md-5  col-xs-12 phone">
+                    <img src="img/heroImage.png" data-rjs="3">
+                </div>
             </div>
-        </header>
-        <div class="row">
-    <div class="col-lg-6 col-md-7 col-lg-offset-1 col-xs-12 intro">
-        <h1>Yet another Hacker News client for iOS</h1>
-        <h2>Simple, fast, intuitive and elegant. HNBuddy will make your browsing experience precisely as good as its developer's programming skills permit it to be!</h2>
-        <a href="https://itunes.apple.com/us/app/hnbuddy-hackernews-client/id1312439587?mt=8" target="_blank"><img src="img/appstore-button.png" data-rjs="3"></a>
-    </div>
-    <div class="col-lg-5 col-md-5  col-xs-12 phone">
-        <img src="img/heroImage.png" data-rjs="3">
-    </div>
-</div>
-    </div>
-</section>
+        </div>
+    </section>
+
     <section id="lists-section">
         <div class="container">
             <div class="row bottom-separator">
@@ -330,23 +324,18 @@
     </section>
 
     <footer>
-    <div class="container">
-        <div class="row text-center">
-            <p class="links">
-                <a href="https://itunes.apple.com/us/app/hnbuddy-hackernews-client/id1312439587">Appstore</a><!-- - <a href="">Github</a>--> - <a href="mailto:contact@hnbuddy.io">Contact</a>
-            </p>
-            <p>Made with <strong>passion</strong> in Brussels. Copyright 2017 <a href="https://github.com/tsucres">Stéphane Sercu</a>.</p>
+        <div class="container">
+            <div class="row text-center">
+                <p class="links">
+                    <a href="https://itunes.apple.com/us/app/hnbuddy-hackernews-client/id1312439587">Appstore</a><!-- - <a href="">Github</a>--> - <a href="mailto:contact@hnbuddy.io">Contact</a>
+                </p>
+                <p>Made with <strong>passion</strong> in Brussels. Copyright 2017 <a href="https://github.com/tsucres">Stéphane Sercu</a>.</p>
+            </div>
         </div>
-    </div>
-    
-</footer>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+    </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
-
-        
         <script type="text/javascript" src="js/retina.min.js"></script>
         <script type="text/javascript" src="js/progressive-bg.js"></script>
         <script src="js/parallax-background.min.js"></script>
@@ -392,10 +381,9 @@
             });
 
 
-            </script>
 
-        <script type="text/javascript">
-console.log(`%c  _    _          _   _             _     _                            _ 
+
+            console.log(`%c  _    _          _   _             _     _                            _ 
  | |  | |        | | | |           | |   | |                          | |
  | |__| |   ___  | | | |   ___     | |_  | |__     ___   _ __    ___  | |
  |  __  |  / _ \\ | | | |  / _ \\    | __| | '_ \\   / _ \\ | '__|  / _ \\ | |
@@ -405,9 +393,9 @@ console.log(`%c  _    _          _   _             _     _                      
                                                                          
 `, "font-family:monospace");
             console.log("If you're here you may be interested in the github repo of the website: https://www.github.com. It contains all the resources used to build this page :)"); 
-</script>
-          
-
+        </script>
         
 </body>
+
+
 </html>
